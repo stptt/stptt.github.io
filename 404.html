@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Приглашение — Круг</title>
+    <meta name="robots" content="noindex" />
+    <!-- Абсолютные пути: эта страница отдаётся GitHub Pages на ЛЮБОМ несуществующем
+         маршруте (в т.ч. /join/<token>), поэтому относительные ссылки использовать нельзя. -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <a class="brand" href="/">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">Круг</span>
+      </a>
+
+      <div class="card" id="invite" hidden>
+        <h1>Вас пригласили в круг</h1>
+        <p class="lead">
+          «Круг» — закрытый видеомессенджер для семьи и друзей: маленькие приватные круги, где
+          близкие общаются вертикальным видео. Откройте приглашение в приложении, чтобы вступить.
+        </p>
+        <p><a class="cta" id="open" href="/">Открыть в приложении</a></p>
+        <p class="foot">
+          Если приложение не установлено — установите «Круг», затем откройте эту ссылку ещё раз.
+        </p>
+      </div>
+
+      <div class="card" id="notfound" hidden>
+        <h1>Страница не найдена</h1>
+        <p>Такой страницы нет. Вернитесь на <a href="/">главную</a>.</p>
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        var match = location.pathname.match(/\/join\/([0-9a-fA-F-]{36})/);
+        if (match) {
+          var token = match[1];
+          document.getElementById('open').setAttribute('href', 'krug://join/' + token);
+          document.getElementById('invite').hidden = false;
+        } else {
+          document.getElementById('notfound').hidden = false;
+        }
+      })();
+    </script>
+  </body>
+</html>
