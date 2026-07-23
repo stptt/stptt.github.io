@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["YP2RJRM5D6.ru.krug.app"],
+        "components": [
+          {
+            "/": "/join/*",
+            "comment": "Invite links open the Krug app on the Join screen"
+          }
+        ]
+      }
+    ]
+  }
+}
