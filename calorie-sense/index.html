@@ -7,11 +7,12 @@
     <title>Calorie Sense · Browser playtest</title>
     <meta name="description" content="Guess the calories in an illustrated portion, then see how much food your guess would make. Play two short rounds.">
     <meta property="og:title" content="Calorie Sense · Can you guess the calories?">
-    <meta property="og:description" content="Move the slider, reveal your plate and play two short rounds in your browser.">
+    <meta property="og:description" content="Guess the calories, compare the portions and play two short rounds in your browser.">
     <style>
-      html, body { height: 100%; margin: 0; background: #291d34; }
+      html, body { height: 100%; margin: 0; background: #291d34; overscroll-behavior-x: none; }
       body { overflow: hidden; }
       #root { display: flex; flex: 1; height: 100%; }
+      #root [role="slider"] { touch-action: pan-y pinch-zoom; }
       noscript { color: #fff5e2; font-family: system-ui, sans-serif; }
     </style>
   <link rel="icon" href="/calorie-sense/favicon.ico"/></head>
