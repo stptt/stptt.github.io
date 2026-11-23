@@ -13,12 +13,14 @@
       body { overflow: hidden; }
       #root { display: flex; flex: 1; height: 100%; }
       #root [role="slider"] { touch-action: pan-y pinch-zoom; }
+      #root :focus-visible { outline: 3px solid #dbf477; outline-offset: 2px; box-shadow: 0 0 0 2px #291d34; }
+      @media (forced-colors: active) { #root :focus-visible { outline-color: Highlight; } }
       noscript { color: #fff5e2; font-family: system-ui, sans-serif; }
     </style>
   <link rel="icon" href="/calorie-sense/favicon.ico"/></head>
   <body>
     <noscript>Enable JavaScript to play Calorie Sense.</noscript>
     <div id="root"></div>
-  <script src="/calorie-sense/_expo/static/js/web/index-3a13e8b578a0129d91053b4be0646a38.js" defer></script>
+  <script src="/calorie-sense/_expo/static/js/web/index-d7054480452acca03783248c65d4afb7.js" defer></script>
 </body>
 </html>
